@@ -4,7 +4,7 @@
 clc
 clear
 load('data_final.mat')
-path_folder_images='C:\Users\Eurhope\Desktop\Research projects\ECB_backup_29062021\FULL_MOST_UPDATED_ONE\1st_round\Personal_folders\Research\paper_Oil_volatility_Uncertainty\results_25042024\';
+path_folder_images='';
 models={'HAR-OVX';'HAR-OVX-GPR';'DMA ALL'};
 est_date='2014-01-15';
 h=[1 5 10 15 22];
@@ -82,5 +82,6 @@ prob_ALL3_DMA(:,1,1)=sum(mPost_Omega_ALL(ssize4+2*max(h):end,idx_ALL3),2);
 
 FOR(:,:,i)=[RV_for_OVX RV_forX RV_for_DMA_ALL];
 ERR(:,:,i)=[err_AR3_OVX err_AR3_OIL err_DMA_ALL];
+
 
 MSPE=mean(squeeze(ERR(ssize4+2*max(h):end,:,i)).^2,1)';
