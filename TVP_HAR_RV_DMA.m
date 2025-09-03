@@ -3,9 +3,6 @@
 
 function [y_t_pred,RV_for,errors,newX,MSPE,MAE,theta_update,R_t,vPredLik,Variance,DoC,P,ssize_general]=TVP_HAR_RV_DMA(y,x,xlags_only,constant,p,ssize,ssize1,h,lambda,dbeta,logorlevel,method,meth_forg_fact_self_pert,maxh,date,Xnew,RV_for_cond,sshocks)
 
-% Copyright: Panagiotis Delis
-% pandelis22@yahoo.gr
-
 if strcmpi(logorlevel,'level')
 else
 end
@@ -234,4 +231,5 @@ if const==1
 end
 beta=x\y;
 s=(y-x*beta)'*(y-x*beta)/(N-M);
+
 end
