@@ -2,9 +2,6 @@
 % pandelis@unipi.gr
 
 function [newX,param,errors,RV_for,Y,MSPE_HAR,MAE_HAR,mdl,DoC,RV_for_all,ssize_general,Y_USO]=HAR_RV(y,x,xlags_only,constant,p,logorlevel,ssize,ssize1,h,method,maxh,date,USO)
-  
-% Copyright: Panagiotis Delis
-% pandelis@unipi.gr
 
 RV_for_all=[];
 if strcmpi(logorlevel,'level')
@@ -146,4 +143,5 @@ if const==1
 end
 beta=x\y;
 s=(y-x*beta)'*(y-x*beta)/(N-M);
+
 end
